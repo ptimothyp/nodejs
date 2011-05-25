@@ -1,8 +1,7 @@
 var net = require('net')
 
-var server = net.createServer(function(socket) {
-	socket.write('hello\n');
-	socket.end('world\n');
+var server = net.createServer(function(socket) {    	
+    socket.write('Welcome to the cloud');        
 });
 
-server.listen(8000);
+server.listen(process.env.C9_PORT);
